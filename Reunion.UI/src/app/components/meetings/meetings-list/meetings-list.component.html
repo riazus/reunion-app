@@ -1,0 +1,22 @@
+<div class="container my-5">
+  <h1>Meetings</h1>
+  <table class="table" *ngIf="meetings && meetings.length > 0">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>creator</th>
+        <th>theme</th>
+        <th>date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let meeting of meetings">
+        <td>{{meeting.id}}</td>
+        <td>{{meeting.creator.name}}</td>
+        <td>{{meeting.theme}}</td>
+        <td>{{meeting.date}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!meetings || meetings.length <= 0">No meetings Found</p>
+</div>
