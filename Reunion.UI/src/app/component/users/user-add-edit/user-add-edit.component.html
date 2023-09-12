@@ -1,0 +1,15 @@
+<div mat-dialog-title>
+  <h1> User editing form</h1>
+</div>
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Ex. Riyaz" formControlName="name" required="true">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'Save'}}</button>
+  </div>
+</form>
